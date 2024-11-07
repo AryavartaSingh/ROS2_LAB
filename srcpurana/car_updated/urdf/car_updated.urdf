@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="car_updated">
+  <link
+    name="Base_Link">
+    <inertial>
+      <origin
+        xyz="1.1817E-17 -0.013946 -0.011046"
+        rpy="0 0 0" />
+      <mass
+        value="0.26149" />
+      <inertia
+        ixx="0.00078744"
+        ixy="-2.3448E-20"
+        ixz="1.2335E-21"
+        iyy="0.0010621"
+        iyz="-5.7208E-05"
+        izz="0.00031777" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Base_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Base_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Wheel_1">
+    <inertial>
+      <origin
+        xyz="-6.9389E-18 1.3878E-17 0.017002"
+        rpy="0 0 0" />
+      <mass
+        value="0.030606" />
+      <inertia
+        ixx="1.2864E-05"
+        ixy="-3.6724E-11"
+        ixz="7.1521E-22"
+        iyy="1.2865E-05"
+        iyz="-3.3406E-21"
+        izz="2.263E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BaseAnd_Wheel1"
+    type="continuous">
+    <origin
+      xyz="-0.065 0.0075 0.0625"
+      rpy="-1.5708 -0.23819 1.5708" />
+    <parent
+      link="Base_Link" />
+    <child
+      link="Wheel_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_2">
+    <inertial>
+      <origin
+        xyz="-1.0408E-17 2.7756E-17 0.017002"
+        rpy="0 0 0" />
+      <mass
+        value="0.030606" />
+      <inertia
+        ixx="1.2864E-05"
+        ixy="-3.6724E-11"
+        ixz="-2.5739E-21"
+        iyy="1.2865E-05"
+        iyz="1.6303E-21"
+        izz="2.263E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Base_Wheel_2"
+    type="continuous">
+    <origin
+      xyz="-0.029493 0.12147 0"
+      rpy="0 0 -0.23579" />
+    <parent
+      link="Wheel_1" />
+    <child
+      link="Wheel_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_3">
+    <inertial>
+      <origin
+        xyz="0 6.9389E-18 0.017002"
+        rpy="0 0 0" />
+      <mass
+        value="0.030606" />
+      <inertia
+        ixx="1.2864E-05"
+        ixy="-3.6724E-11"
+        ixz="9.8522E-22"
+        iyy="1.2865E-05"
+        iyz="-4.0005E-21"
+        izz="2.263E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Base_Wheel_3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.13"
+      rpy="3.1416 0 0.71217" />
+    <parent
+      link="Wheel_2" />
+    <child
+      link="Wheel_3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_4">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 3.4694E-18 0.017002"
+        rpy="0 0 0" />
+      <mass
+        value="0.030606" />
+      <inertia
+        ixx="1.2865E-05"
+        ixy="-7.4115E-22"
+        ixz="-2.4415E-21"
+        iyy="1.2864E-05"
+        iyz="-1.8474E-21"
+        izz="2.263E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.87843 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Wheel_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Base_Wheel_4"
+    type="continuous">
+    <origin
+      xyz="-0.029493 0.12147 0"
+      rpy="0 0 -1.4505" />
+    <parent
+      link="Wheel_3" />
+    <child
+      link="Wheel_4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Lidar">
+    <inertial>
+      <origin
+        xyz="0.015315 0.0079465 -0.00028147"
+        rpy="0 0 0" />
+      <mass
+        value="0.075727" />
+      <inertia
+        ixx="1.6042E-05"
+        ixy="-2.907E-08"
+        ixz="1.6429E-07"
+        iyy="3.5692E-05"
+        iyz="-5.8948E-09"
+        izz="2.2742E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Base_Lidar"
+    type="fixed">
+    <origin
+      xyz="0.040292 -0.051116 -0.065"
+      rpy="0 0 -3.0237" />
+    <parent
+      link="Wheel_4" />
+    <child
+      link="Lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Camera">
+    <inertial>
+      <origin
+        xyz="-5.4817E-19 -3.4694E-18 0.013303"
+        rpy="0 0 0" />
+      <mass
+        value="0.016509" />
+      <inertia
+        ixx="1.83E-06"
+        ixy="-6.3754E-23"
+        ixz="3.6358E-23"
+        iyy="1.83E-06"
+        iyz="-7.8373E-24"
+        izz="1.6525E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_updated/meshes/Camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Base_Camera"
+    type="fixed">
+    <origin
+      xyz="0.0515 -0.0315 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="Lidar" />
+    <child
+      link="Camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
